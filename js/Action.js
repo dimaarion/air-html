@@ -3,7 +3,47 @@ class Action{
     Composite = Matter.Composite
     Body = Matter.Body
     Constraint = Matter.Constraint
+    Events = Matter.Events
     scene
+
+    getMouseWorldX(offsetX,scale) {
+        // Если у вас есть центрирование холста (offsetX) и масштаб (scale):
+        // Если камера тоже двигается за игроком, прибавляем смещение камеры (camX):
+        // x += (this.camX || 0);
+
+        return (mouseX - (offsetX || 0)) / (scale || 1);
+    }
+
+    getMouseWorldY(offsetY,scale) {
+        // y += (this.camY || 0);
+
+        return (mouseY - (offsetY || 0)) / (scale || 1);
+    }
+
+    pointRect(pointX,pointY,x,y,xW,yW){
+        return pointX >= x &&         // right of the left edge AND
+            pointX <= x + xW &&    // left of the right edge AND
+            pointY >= y &&         // below the top AND
+            pointY <= y + yW;
+
+    }
+
+
+    getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    getRandomFloat(min, max) {
+        return  (Math.random() * (max - min) + min).toFixed(2);
+    }
+
+    createArray(num){
+       let a = []
+        for (let i = 0; i < num; i++){a[i] = i}
+        return a
+    }
 
     rect(x,y,width,height,options = {}){
         return  this.Bodies.rectangle(x + width / 2,y + height / 2,width,height,{...options,width:width,height:height})

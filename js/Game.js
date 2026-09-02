@@ -21,6 +21,8 @@ class Game {
   offsetY = 0;
   scene
   level_1 = new Level_1()
+    p5bezier
+    currentScale
   constructor() {
 
   }
@@ -33,11 +35,11 @@ init(p5){
   vierBox(){
     let scaleX = width / this.virtualWidth;
     let scaleY = height / this.virtualHeight;
-    let currentScale = min(scaleX, scaleY);
-    this.offsetX = (width - this.virtualWidth * currentScale) / 2;
-    this.offsetY = (height - this.virtualHeight * currentScale) / 2;
+    this.currentScale = min(scaleX, scaleY);
+    this.offsetX = (width - this.virtualWidth * this.currentScale) / 2;
+    this.offsetY = (height - this.virtualHeight * this.currentScale) / 2;
     translate(this.offsetX, this.offsetY);
-    scale(currentScale);
+    scale(this.currentScale);
   }
 
     async preload(){
@@ -48,12 +50,15 @@ init(p5){
        this.scene = await this.p5.loadJSON('./json/scene.json');
     }
 
-  create(){
+  create(canvas){
+      this.canvas = canvas
       rectMode(this.p5.CENTER);
       imageMode(this.p5.CENTER);
     this.engine = Matter.Engine.create()
-    this.player.create(this.scene,this.engine.world)
     this.level_1.create(this.engine.world)
+    this.player.create(this)
+    this.p5bezier = initBezier(this.canvas)
+
 
   }
 
@@ -61,15 +66,14 @@ init(p5){
       rectMode(this.p5.CENTER);
       imageMode(this.p5.CENTER);
 
-
+    this.level_1.bg()
     this.p5.push();
     this.getCameraOffset()
     this.level_1.update()
     this.player.update()
       Matter.Engine.update(this.engine)
     this.p5.pop();
-
-      this.player.fire()
+    this.player.fire()
 
   }
    getCameraOffset = () => {

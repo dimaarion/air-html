@@ -1,13 +1,14 @@
 const game = new Game()
 
-
+let c
 let img
 async function setup() {
     game.init(this)
  await game.preload()
-  createCanvas(window.innerWidth, window.innerHeight);
+ c = createCanvas(window.innerWidth, window.innerHeight);
   game.vierBox()
-  game.create()
+  game.create(c)
+
 }
 
 function draw() {
