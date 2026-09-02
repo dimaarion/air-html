@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="808.709" height="210.777" viewBox="0 0 808.709 210.777" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter color-interpolation-filters="sRGB" x="-246.706" y="-87.501" width="248.706" height="89.501" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" in="SourceAlpha" />
+      <feOffset dx="0" dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix_1" result="Shadow_2" />
+      <feBlend mode="normal" in="SourceGraphic" in2="Shadow_2" result="Shape_3" />
+      <feGaussianBlur stdDeviation="2.5" />
+    </filter>
+    <filter color-interpolation-filters="sRGB" x="-164.968" y="-52.23" width="166.968" height="54.23" id="filter_2">
+      <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" in="SourceAlpha" />
+      <feOffset dx="0" dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix_1" result="Shadow_2" />
+      <feBlend mode="normal" in="SourceGraphic" in2="Shadow_2" result="Shape_3" />
+      <feGaussianBlur stdDeviation="2.5" />
+    </filter>
+    <filter color-interpolation-filters="sRGB" x="-148.591" y="-49.566" width="150.591" height="51.566" id="filter_3">
+      <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" in="SourceAlpha" />
+      <feOffset dx="0" dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix_1" result="Shadow_2" />
+      <feBlend mode="normal" in="SourceGraphic" in2="Shadow_2" result="Shape_3" />
+      <feGaussianBlur stdDeviation="2.5" />
+    </filter>
+  </defs>
+  <g transform="translate(13.5 9.5)">
+    <path d="M0.524869 52.4086C3.49863 44.8391 21.6115 50.7866 45.9424 44.8391C60.2076 41.352 66.3879 32.0812 74.4541 29.1675C80.1456 27.1116 86.7762 31.6381 97.8484 28.6185C113.841 24.2569 88.5448 5.90739 121.571 0.595848C154.598 -4.71569 144.505 26.8643 177.87 40.5136C201.66 50.2459 254.648 48.0832 248.159 54.5714C241.671 61.0596 175.167 57.8155 151.917 66.4665C128.667 75.1175 165.975 86.7422 155.161 89.1753C144.347 91.6084 138.941 79.7133 108.662 76.1988C78.3836 72.6844 61.0816 81.065 34.0473 75.1175C7.01302 69.1699 -2.44889 59.9783 0.524869 52.4086Z" fill="#D3EBE8" fill-rule="evenodd" filter="url(#filter_1)" transform="translate(0 94.276)" />
+    <path d="M0.0619812 35.6949C1.49701 33.156 28.3211 25.5392 28.3211 25.5392C28.3211 25.5392 32.7208 4.90633 39.896 0.821998C47.0711 -3.26234 57.0218 9.20191 57.0218 9.20191C57.0218 9.20191 80.2032 6.54745 87.9304 10.6318C95.6575 14.7161 87.9304 25.5392 87.9304 25.5392C87.9304 25.5392 166.968 30.7275 166.968 35.6949C166.968 40.6624 87.9304 45.409 87.9304 45.409C87.9304 45.409 79.7619 54.6564 72.0348 54.2148C64.3076 53.7732 57.0218 43.6428 57.0218 43.6428C57.0218 43.6428 48.5062 47.4178 39.896 45.4308C31.2858 43.4439 22.581 35.6949 22.581 35.6949C22.581 35.6949 -1.37305 38.2338 0.0619812 35.6949Z" fill="#D3EBE8" fill-rule="evenodd" filter="url(#filter_2)" transform="translate(306.362 0)" />
+    <path d="M0.0698242 35.0579C-1.7561 29.8235 32.6924 29.7018 50.222 20.9373C67.7516 12.1729 58.9891 0 70.1882 0C81.3872 0 74.9337 12.1729 95.0181 20.9373C115.103 29.7018 152.352 31.5277 150.526 35.0579C148.7 38.588 106.611 30.9959 87.7144 35.0579C68.8176 39.1198 82.4862 49.6016 74.939 51.3058C67.3918 53.01 76.243 45.9366 57.5258 41.8746C38.8084 37.8127 1.89575 40.2922 0.0698242 35.0579Z" fill="#D3EBE8" fill-rule="evenodd" filter="url(#filter_3)" transform="translate(631.118 86.769)" />
+  </g>
+</svg>
