@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="77.517" height="152" viewBox="0 0 77.517 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient_1" gradientUnits="userSpaceOnUse" x1="38.758" y1="0" x2="38.758" y2="43.697">
+      <stop offset="0" stop-color="#81A36A" />
+      <stop offset="1" stop-color="#466B52" />
+    </linearGradient>
+    <linearGradient id="gradient_2" gradientUnits="userSpaceOnUse" x1="30.028" y1="0" x2="30.028" y2="36.803">
+      <stop offset="0" stop-color="#7DA067" />
+      <stop offset="1" stop-color="#456B50" />
+    </linearGradient>
+    <linearGradient id="gradient_3" gradientUnits="userSpaceOnUse" x1="22.155" y1="0" x2="22.155" y2="26.549">
+      <stop offset="0" stop-color="#7EA168" />
+      <stop offset="1" stop-color="#456B50" />
+    </linearGradient>
+    <linearGradient id="gradient_4" gradientUnits="userSpaceOnUse" x1="15.683" y1="0" x2="15.683" y2="45.775">
+      <stop offset="0" stop-color="#81A367" />
+      <stop offset="1" stop-color="#466B52" />
+    </linearGradient>
+  </defs>
+  <g>
+    <rect width="13.559" height="30.685" fill="#57240A" fill-rule="evenodd" transform="translate(34.254 121.315)" />
+    <path d="M15.4639 42.1338L16.1756 34.6619L0 32.5611L21.8475 0L59.6605 0.209938L77.3066 24.7884L73.9454 29.41L77.5166 32.5611L68.0634 38.2331C68.0634 38.2331 67.8533 43.695 67.8533 43.695C66.6274 43.8064 52.0397 38.8128 38.5352 38.3693L15.4639 42.1338Z" fill="url(#gradient_1)" fill-rule="evenodd" transform="translate(0 90.042)" />
+    <path d="M16.7243 1.80921L0 25.2677L10.0705 30.3946L14.2818 36.437L23.2537 32.0426L32.5918 36.8032L43.0285 34.0566L51.2681 30.0284L60.0569 29.479L44.6765 0L16.7243 1.80921Z" fill="url(#gradient_2)" fill-rule="evenodd" transform="translate(8.73 60.789)" />
+    <path d="M10.5881 0.156799L0 18.4931L8.60572 22.7044L15.3804 26.5495L19.5917 21.7889L25.2679 25.634L32.0426 21.7889L35.8877 17.3945L44.3103 16.8452L32.4088 0L10.5881 0.156799Z" fill="url(#gradient_3)" fill-rule="evenodd" transform="translate(18.434 41.747)" />
+    <path d="M0 38.3356L8.11158 44.3103L15.2525 43.3948L19.2807 45.7751L22.9427 43.5779L27.154 44.8596L31.3653 39.5497L15.8018 0L0 38.3356Z" fill="url(#gradient_4)" fill-rule="evenodd" transform="translate(22.957 0)" />
+  </g>
+</svg>
