@@ -1,74 +1,246 @@
-[{
-  "_t": "RECT",
-  "id": "I9mfKJdFUEy8dH6d-7zj0g",
-  "name": "platform",
-  "pos": [0,931],
-  "size": [1920,149],
-  "fills": [
+[
+  {
+    "_t": "GROUP",
+    "id": "rauzsgarS0u_jzwhkay40w",
+    "name": "christmas",
+    "pos": [757,701],
+    "size": [77.5166,152],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "22uhXO-n2EGzTS8SoZ2suA",
+    "name": "christmas",
+    "pos": [290,689],
+    "size": [77.5166,152],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "YIv1U7YSPU2kpcacrUCEpw",
+    "name": "christmas",
+    "pos": [1913.5887,608.5],
+    "size": [132.3392,259.5],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "EXv7xmP4OkOnZw3DQfmlMA",
+    "name": "christmas",
+    "pos": [2225.7395,498.7],
+    "size": [176.86026,346.8],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "f0OFW7m_JUqSluDA5diQGA",
+    "name": "christmas",
+    "pos": [2863.806,635.5],
+    "size": [107.248314,210.29999],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "EabTnc2NYEaeqOz_fupStA",
+    "name": "christmas",
+    "expand": true,
+    "pos": [3653.754,289],
+    "size": [285.74054,560.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "BFIpLi5HCUavxXrv3PL7qg",
+    "name": "christmas",
+    "expand": true,
+    "pos": [4852,507],
+    "size": [174.56543,342.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "YwBJJI2W506sv-kjmW6MKw",
+    "name": "christmas",
+    "expand": true,
+    "pos": [4940,507],
+    "size": [174.56543,342.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "ZnsYqKRnUU-gqE5e75e8hw",
+    "name": "christmas",
+    "expand": true,
+    "pos": [5054.94,474],
+    "size": [180.68515,354.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "nsx4UDFPIUKpStUn72zx0w",
+    "name": "christmas",
+    "expand": true,
+    "pos": [5180,496],
+    "size": [180.68515,354.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "xINIU_xATkOGbCBkXIAoDQ",
+    "name": "christmas",
+    "expand": true,
+    "pos": [4734,540],
+    "size": [157.73615,309.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "BcvnYdgdF0C92t-7ed0VZQ",
+    "name": "christmas",
+    "expand": true,
+    "pos": [4813,540],
+    "size": [157.73615,309.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "LFdBgPGnqUWRR422fYEDEw",
+    "name": "christmas",
+    "expand": true,
+    "pos": [4645.5854,507],
+    "size": [174.56543,342.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "fKL9W-_FMkiuoEIrv-Cobg",
+    "name": "christmas",
+    "expand": true,
+    "pos": [4258,289],
+    "size": [285.74054,560.3],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "XJU621V920uFrZNoRnVVxw",
+    "name": "christmas",
+    "pos": [1573.2195,701],
+    "size": [79.86247,156.59998],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },{
+  "_t": "GROUP",
+  "id": "fwPE6o_yKkiaXMXfcDE9PA",
+  "name": "Start",
+  "pos": [1366,724],
+  "size": [219.48242,151],
+  "export": [
     {
-      "color": "C5CAE9",
-      "colorId": "619BzCE73Ee4tskFcYTcHA"
+      "format": "SVG"
     }
-  ]
+  ],
+  "skipConstraints": true
 },{
-  "_t": "RECT",
-  "id": "O6iO5rgnRkKTCYCsS7Ib2Q",
-  "name": "ballon",
-  "pos": [935,305.99997],
-  "size": [292.30957,403.61603],
+  "_t": "GROUP",
+  "id": "3wRPiLRnXkWXmbnyiOx0LQ",
+  "name": "platform-pusck",
+  "pos": [886.808,811.7],
+  "size": [395.38394,106.29996],
   "lockAspect": true,
   "export": [
-    {}
+    {
+      "format": "SVG"
+    }
   ],
-  "fills": [
-    {
-      "type": 4,
-      "color": "80",
-      "pattern": {
-        "type": 1,
-        "image": "fca4a16b0cc26cea0b1ea9878ddfa98277e96dbc.png"
-      }
-    }
-  ]
-},{
-  "_t": "RECT",
-  "id": "O20CYVqELESwscReXCtxlA",
-  "name": "bascet",
-  "pos": [1020.30945,746.7375],
-  "size": [120,125],
-  "lockAspect": true,
-  "fills": [
-    {
-      "type": 4,
-      "color": "80",
-      "pattern": {
-        "type": 1,
-        "image": "96dd1e61dd9064e9e3c2205ca3d025a6af63235c.png"
-      }
-    }
-  ]
-},{
-  "_t": "PATH",
-  "id": "I_mlk2IJik2lAKcciADThg",
-  "name": "stone",
-  "pos": [274.03336,897.7982],
-  "size": [991.25726,181.28052],
-  "fill": "B52B2B",
-  "border": "8AD91C",
-  "thickness": 5,
-  "edited": true,
-  "points": [[0.10488361,0.59135854],[0.16212706,0.36879432],[0.21530475,0.25531867],[0.2996108,0.113474965],[0.391699,0.021276386],[0.47859916,0],[0.64202327,0],[0.7354084,0.063829504],[0.79766536,0.14893574],[0.8677041,0.2907801],[0.9338522,0.54609877],[0.96887153,0.8014181],[1,1],[0,1],[0.04928662,0.76595736]
-  ]
-},{
-  "_t": "PATH",
-  "id": "tp5MCIVRgkOdcgCrgH3erg",
-  "name": "ground",
-  "pos": [-405.99997,341],
-  "size": [7557.1934,2116.038],
-  "fill": "309412",
-  "border": "8AD91C",
-  "thickness": 20,
-  "edited": true,
-  "points": [[0.057167258,0.29748628],[0.06700243,0.28924638],[0.080493666,0.27744657],[0.09536155,0.2784299],[0.1132581,0.2784299],[0.12454667,0.25974688],[0.14657322,0.2784299],[0.16777368,0.28629646],[0.19337954,0.27056336],[0.21981137,0.22926413],[0.23275192,0.19484812],[0.24128722,0.17124857],[0.24772798,0.15937862],[0.26074818,0.1432047],[0.2709378,0.13916124],[0.28622243,0.12601994],[0.2998086,0.1300634],[0.31565914,0.14017211],[0.3383029,0.15533516],[0.35924834,0.15432428],[0.37198547,0.12298733],[0.38274124,0.10276994],[0.39383844,0.10162535],[0.40531465,0.10907737],[0.4216595,0.13391738],[0.43417913,0.1637254],[0.44287327,0.1935334],[0.45400158,0.2146474,2,0,0.45782694,0.21961538,0.45400158,0.2146474],[0.46408683,0.23079343],[0.48008397,0.27053747],[0.49573335,0.28792542],[0.505123,0.28544146],[0.51312155,0.26060143,2,0,0.516947,0.25314942,0.51312155,0.26060143],[0.5190337,0.24197142,2,0,0.5197291,0.23203543,0.5190337,0.24197142],[0.5211201,0.1947754],[0.5211201,0.16248342],[0.52216345,0.12398138],[0.53050965,0.06312335],[0.5381607,0.049461346],[0.55833083,0.03455734],[0.5753712,0.015927335],[0.58406544,0.008475326],[0.5892819,0.05442936],[0.5959788,0.08306742],[0.61064214,0.079455785],[0.6263168,0.0668151],[0.6460365,0.046951137],[0.6703068,0.03792208,2,0,0.6743519,0.034310453,0.6703068,0.03792208],[0.69508284,0.005417436],[0.71075743,0,2,0,0.7148025,0.01625231,0.71075743,0],[0.72592646,0.055980198,2,0,0.7289603,0.07223253,0.72592646,0.055980198],[0.7451404,0.11015462,2,0,0.75019675,0.13182436,0.7451404,0.11015462],[0.76132077,0.16071738,2,0,0.7648602,0.17696969,0.76132077,0.16071738],[0.77092767,0.19141619],[0.7891306,0.18599875],[0.80480516,0.14627086],[0.8209855,0.13182436],[0.8371659,0.13363017],[0.8517968,0.14627622],[0.8748933,0.18064578],[0.895103,0.18751967],[0.924455,0.16517946],[0.9648739,0.16002403],[0.97979045,0.16002403],[1,0.16174252],[1,0.4160772],[1,1],[0.057167258,1],[0,1],[0.0047668554,0.33954605],[0.031806976,0.3175172]
-  ]
-}]
+  "skipConstraints": true
+}
+]

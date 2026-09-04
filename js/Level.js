@@ -22,30 +22,78 @@ class Level_1 extends Action{
     }
     hill = {
         img:null,
-        count:30,
+        count:10,
         arr:[]
     }
+    mountain = {
+        img:null,
+        count:10,
+        arr:[]
+    }
+
     wind = {
         weak:{
             body:null,
-            speed:0.1
-        }
+            speed:1
+        },
+        strong:{
+            body:null,
+            speed:2
+        },
+        very:{
+            body:null,
+            speed:3
+        },
     }
-    async preload(p5){
+    christmas = {
+        img:null,
+        body:null
+    }
+    partLeft
+    partRight
+    startImg = {
+        body:null,
+        img:null,
+    }
+    platformImg = {
+        body:null,
+        img:null,
+    }
+    async preload(p5,handleImage){
         this.p5 = p5
-        this.scene = await this.p5.loadJSON('./json/scene.json');
-        this.sky.img = await this.p5.loadImage('./img/sky.svg');
-        this.bg_2.img = await this.p5.loadImage('./img/bg_2.svg');
-        this.stone.img = await this.p5.loadImage('./img/stone.svg');
-        this.hill.img = await this.p5.loadImage('./img/hill.svg');
+        this.scene = await this.p5.loadJSON('./json/scene.json',handleImage);
+        this.sky.img = await this.p5.loadImage('./img/sky.svg',handleImage);
+        this.bg_2.img = await this.p5.loadImage('./img/bg_2.svg',handleImage);
+        this.stone.img = await this.p5.loadImage('./img/stone.svg',handleImage);
+        this.hill.img = await this.p5.loadImage('./img/hill.svg',handleImage);
+        this.mountain.img = await this.p5.loadImage('./img/mountain.svg',handleImage);
+        this.christmas.img = await this.p5.loadImage('./img/christmas.svg',handleImage);
+        this.startImg.img = await this.p5.loadImage('./img/Start.svg',handleImage);
+        this.platformImg.img = await this.p5.loadImage('./img/platform-pusck.svg',handleImage);
     }
 
     create(world){
-
-
-        this.ground.body =  this.rect(0,865,7000,35,{isStatic:true})
-        this.wind.weak.body = this.rect(0,50,7000,200,{isStatic:true,isSensor:true,label:"weak"})
-        this.Composite.add(world,[this.ground.body,this.wind.weak.body])
+        this.christmas.body = this.scene.filter((el)=>el.name === "christmas").map((el)=>this.trapezoid(el.pos[0],el.pos[1],el.size[0],el.size[1],1,{isStatic:true}))
+        this.startImg.body = this.scene.filter((el)=>el.name === "Start").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true}))
+        this.platformImg.body = this.scene.filter((el)=>el.name === "platform-pusck").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true}))
+        this.partLeft = this.rect(0,-1500,100,3000,{isStatic:true})
+        this.partRight = this.rect(6900,-1500,100,3000,{isStatic:true})
+        this.ground.body =  this.rect(0,865,10000,35,{isStatic:true,label:"ground"})
+        this.wind.weak.body = this.rect(0,50,10000,200,{isStatic:true,isSensor:true,label:"weak"})
+        this.wind.strong.body = this.rect(0,-200,10000,200,{isStatic:true,isSensor:true,label:"strong"})
+        this.wind.very.body = this.rect(0,-500,10000,200,{isStatic:true,isSensor:true,label:"very"})
+        let w = [this.ground.body,
+            this.wind.weak.body,
+            this.wind.strong.body,
+            this.wind.very.body,
+            this.partLeft,
+            this.partRight
+        ].concat(
+            this.christmas.body,
+            this.startImg.body,
+            this.platformImg.body
+        )
+        this.Composite.add(world,w)
         this.sky.arr = this.createArray(this.sky.count).map((el)=>{
             el = {
                 img:this.sky.img,
@@ -73,6 +121,17 @@ class Level_1 extends Action{
 
             return el
         })
+        this.mountain.arr = this.createArray(this.mountain.count).map((el)=>{
+            el = {
+                img:this.mountain.img,
+                x:el * this.mountain.img.width,
+                y:850,
+                scale:this.getRandomFloat(1,3)
+            }
+
+            return el
+        })
+
         this.hill.arr = this.createArray(this.hill.count).map((el)=>{
             el = {
                 img:this.hill.img,
@@ -86,14 +145,23 @@ class Level_1 extends Action{
 
     }
 
+    remove(engine){
+       this.Composite.clear(engine.world,true)
+    }
+
     update(){
         this.p5.push()
+
+        this.mountain.arr.forEach((el)=>{
+            image(el.img,el.x ,el.y,el.img.width * el.scale,el.img.height * el.scale)
+        })
         this.sky.arr.forEach((el)=>{
             image(el.img,el.x ,el.y )
         })
         this.bg_2.arr.forEach((el)=>{
             image(el.img,el.x ,el.y )
         })
+
         this.p5.push()
         this.hill.arr.forEach((el)=>{
             image(el.img,el.x ,el.y,el.img.width * el.scale,el.img.height * el.scale)
@@ -101,19 +169,27 @@ class Level_1 extends Action{
         this.p5.pop()
         this.p5.noStroke()
         fill("#4A3124")
-        rect(0,1400,7000,1000)
+        rect(5000,1400,10000,1000)
         fill("#381D13")
-        rect(0,900,7000,15)
+        rect(5000,900,10000,15)
         fill("#747536")
-        rect(0,885,7000,15)
+        rect(5000,885,10000,15)
         fill("#A6BD24")
         rect(this.ground.body.position.x,this.ground.body.position.y,this.ground.body.width,this.ground.body.height)
         this.stone.arr.forEach((el)=>{
             image(el.img,el.x ,el.y )
         })
-        fill("blue")
-        rect(this.wind.weak.body.position.x,this.wind.weak.body.position.y,this.wind.weak.body.width,this.wind.weak.body.height)
+        this.christmas.body.forEach((el)=>{
+            image(this.christmas.img,el.position.x,el.position.y,el.width,el.height + el.width / 2)
+        })
+        this.startImg.body.forEach((el)=>{
+            image(this.startImg.img,el.position.x,el.position.y)
+        })
+        this.platformImg.body.forEach((el)=>{
+            image(this.platformImg.img,el.position.x,el.position.y)
+        })
         this.p5.pop()
+
     }
 
     bg(){
@@ -126,7 +202,7 @@ class Level_1 extends Action{
                 color("#C8EBC7"),
             ] // Array of p5.color objects or arrays containing [p5.color Object, Color Stop (0 to 1)]
         });
-        rect(0, -500, 1920 * 3, 1080 * 3);
+        rect(5000, -500, 10000, 1080 * 3);
         this.p5.pop()
     }
 }

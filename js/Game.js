@@ -1,4 +1,5 @@
 class Game {
+  sdk = new Ysdk()
   p5
   canvas
   virtualWidth = 1920;
@@ -7,6 +8,7 @@ class Game {
   Bodies = Matter.Bodies
   Composite = Matter.Composite
   Body = Matter.Body
+  Events = Matter.Events
   Constraint = Matter.Constraint
   player = new Player()
   ground = new Ground()
@@ -42,15 +44,36 @@ init(p5){
     scale(this.currentScale);
   }
 
-    async preload(){
+    async preload(handleImage){
         this.player.init(this.p5)
-        await this.player.preload()
-        await this.ground.preload(this.p5)
-        await this.level_1.preload(this.p5)
-       this.scene = await this.p5.loadJSON('./json/scene.json');
+        await this.player.preload(handleImage)
+        await this.ground.preload(this.p5,handleImage)
+        await this.level_1.preload(this.p5,handleImage)
+        this.scene = await this.p5.loadJSON('./json/scene.json',handleImage);
     }
 
-  create(canvas){
+    event(){
+        this.Events.on(this.engine,"collisionStart",(event)=>{
+            let pairs = event.pairs;
+            for (let i = 0; i < pairs.length; i++) {
+                let pair = pairs[i];
+                if(pair.bodyB.label === "player" && pair.bodyA.label === "ground"){
+                    this.level_1.remove(this.engine)
+                    this.player.create(this)
+                    this.level_1.create(this.engine.world)
+                    this.player.start = false
+
+                }
+
+
+            }
+
+        })
+    }
+
+    async create(canvas){
+        await  this.sdk.create()
+        await this.sdk.start()
       this.canvas = canvas
       rectMode(this.p5.CENTER);
       imageMode(this.p5.CENTER);
@@ -58,22 +81,21 @@ init(p5){
     this.level_1.create(this.engine.world)
     this.player.create(this)
     this.p5bezier = initBezier(this.canvas)
-
+    this.event()
 
   }
 
   update(){
       rectMode(this.p5.CENTER);
       imageMode(this.p5.CENTER);
-
-    this.level_1.bg()
     this.p5.push();
     this.getCameraOffset()
+    this.level_1.bg()
     this.level_1.update()
     this.player.update()
-      Matter.Engine.update(this.engine)
+    Matter.Engine.update(this.engine)
     this.p5.pop();
-    this.player.fire()
+    this.player.btn()
 
   }
    getCameraOffset = () => {
@@ -86,5 +108,15 @@ init(p5){
      this.cameraY = this.virtualHeight / 2 - playerSvgY;
      translate(this.cameraX,this.cameraY)
   };
+
+  board(e){
+      if(e.key === "r" || e.key === "к"){
+          this.level_1.remove(this.engine)
+          this.player.create(this)
+          this.level_1.create(this.engine.world)
+          this.player.start = false
+      }
+
+  }
 
 }

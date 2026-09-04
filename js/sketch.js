@@ -1,23 +1,46 @@
 const game = new Game()
-
 let c
-let img
+let isLoaded = false
+let totalAssets = [];
+let loadedAssets = 0;
+function handleImage(e){
+    totalAssets = [...totalAssets,e]
+    loadedAssets++;
+    if (loadedAssets === totalAssets.length) {
+        isLoaded = true;
+    }
+    return e
+
+}
+
 async function setup() {
     game.init(this)
- await game.preload()
+ await game.preload(handleImage)
  c = createCanvas(window.innerWidth, window.innerHeight);
   game.vierBox()
-  game.create(c)
+  await game.create(c)
 
 }
 
 function draw() {
-  game.vierBox()
-  game.update()
+    if(isLoaded){
+        background(255)
+        game.vierBox()
+        game.update()
+    }else {
+        background("#000")
+    }
+
+
+
 
 }
 
+function keyPressed(e) {
+    game.board(e)
 
+
+}
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);

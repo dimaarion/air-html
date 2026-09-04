@@ -5,6 +5,7 @@ class Action{
     Constraint = Matter.Constraint
     Events = Matter.Events
     scene
+    start = false
 
     getMouseWorldX(offsetX,scale) {
         // Если у вас есть центрирование холста (offsetX) и масштаб (scale):
@@ -51,6 +52,10 @@ class Action{
 
     circle(x,y,diameter,options = {}){
         return  this.Bodies.circle(x + diameter / 2,y + diameter / 2,diameter / 2,{...options,diameter:diameter})
+    }
+
+    trapezoid(x, y, width, height, slope, options = {}){
+        return this.Bodies.trapezoid(x + width / 2, y + height / 2, width, height, slope, {...options,width:width,height:height, slope:slope})
     }
 
     createPolygonFromJson(data,objects = {}) {
