@@ -4,8 +4,34 @@ class Action{
     Body = Matter.Body
     Constraint = Matter.Constraint
     Events = Matter.Events
+    database = new Database()
     scene
-    start = false
+    gameWidth = 1920
+    gameHeight = 1080
+
+    createAudio(name){
+        return new Howl({
+            src: ["./audio/" + name],
+            html5: false, // Используем Web Audio API (скрывает из трея)
+            loop: false,
+            volume: this.database.getAll().effect // начальная громкость из состояния,
+        })
+    }
+
+    getPlayer(composite){
+      return  this.Composite.allBodies(composite).find((el)=>el.label === "ballon")
+    }
+
+    getObjects(composite,name){
+        return  this.Composite.allBodies(composite).filter((el)=>el.label === name)
+    }
+
+    visible(player,p5,x,y,w,h,children = ()=>{}){
+        let hit = p5.collideRectRect(player.position.x - 1500,player.position.y - 2000,3000,4000,x - w / 2,y - h / 2,w,h)
+        if(hit){
+          return children()
+        }
+    }
 
     getMouseWorldX(offsetX,scale) {
         // Если у вас есть центрирование холста (offsetX) и масштаб (scale):
@@ -54,8 +80,8 @@ class Action{
         return  this.Bodies.circle(x + diameter / 2,y + diameter / 2,diameter / 2,{...options,diameter:diameter})
     }
 
-    trapezoid(x, y, width, height, slope, options = {}){
-        return this.Bodies.trapezoid(x + width / 2, y + height / 2, width, height, slope, {...options,width:width,height:height, slope:slope})
+    trapezoid(x, y, width, height, slope = 0.9, options = {}){
+        return this.Bodies.trapezoid(x + width / 2, y + height / 2, width, height, slope, {...options,width:width,height:height})
     }
 
     createPolygonFromJson(data,objects = {}) {

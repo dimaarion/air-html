@@ -1,3 +1,25 @@
+class Coin{
+    x = 0
+    y = 0
+    img
+
+    create(x,y){
+        this.x = x
+        this.y = y
+    }
+
+    draw(img){
+        this.x -=1
+        this.y -=5
+        if(this.y < 0){
+            this.y = -9999
+            this.x = -9999
+        }
+
+        image(img,this.x,this.y)
+    }
+}
+
 class Player extends Action{
     p5
     ballon
@@ -28,7 +50,7 @@ class Player extends Action{
     fireScale = 0.2
     speedX = 0.0
     speedY = 0.0
-    x = 1000
+    x = 6000
     y = 750
     offsetBallon = {
         x:88,
@@ -39,6 +61,29 @@ class Player extends Action{
     person = null
     personImg = null
     gameOver = false
+    gazImg
+    start = false
+    gaz = {
+        x:310,
+        y:50,
+        w:200,
+        h:50,
+        level:200
+    }
+    groundCollege = false
+    coin = {
+        img:null,
+        count:0,
+        vis: new Coin(),
+        audio:null
+    }
+
+    constructor(x,y) {
+        super();
+        this.x = x
+        this.y = y
+    }
+
     init(p5){
         this.p5 = p5
     }
@@ -50,6 +95,8 @@ class Player extends Action{
         this.fireImg.img = await this.p5.loadImage('./img/faer.png',handleImage);
         this.bag.img = await this.p5.loadImage('./img/bag.png',handleImage);
         this.personImg = await this.p5.loadImage('./img/player.png',handleImage);
+        this.gazImg = await this.p5.loadImage('./img/ballon-gaz.svg',handleImage);
+        this.coin.img = await this.p5.loadImage('./img/coin.svg',handleImage);
     }
 
     event(engine){
@@ -58,19 +105,11 @@ class Player extends Action{
             for (let i = 0; i < pairs.length; i++) {
                 let pair = pairs[i];
 
-                if(pair.bodyB.label === "ballon" && pair.bodyA.label === "weak"){
-                    this.speedX = 1
-                }
-                if(pair.bodyB.label === "ballon" && pair.bodyA.label === "strong"){
-                    this.speedX = 2
-                }
-                if(pair.bodyB.label === "ballon" && pair.bodyA.label === "very"){
-                    this.speedX = 3
-                }
-                if(pair.bodyB.label === "player" && pair.bodyA.label === "ground"){
+                if((pair.bodyA.label === "player" && pair.bodyB.label === "ground") || (pair.bodyA.label === "player" && pair.bodyB.label === "restart")){
                     this.gameOver = true
                     this.start = false
                     this.speedX = 0
+
                 }
 
 
@@ -81,8 +120,15 @@ class Player extends Action{
             let pairs = event.pairs;
             for (let i = 0; i < pairs.length; i++) {
                 let pair = pairs[i];
-                if(pair.bodyB.label === "basket" && pair.bodyA.label === "ground"){
-                    this.speedX = 0
+
+                if(pair.bodyB.label === "ground" && pair.bodyA.label === "basket"){
+                    this.groundCollege = true
+                }
+                if(pair.bodyB.label === "coin" && pair.bodyA.label === "basket"){
+                    this.coin.count +=10
+                    this.Composite.remove(this.game.engine.world,pair.bodyB)
+                    this.coin.vis.create(pair.bodyB.position.x,pair.bodyB.position.y)
+                    this.coin.audio.play()
                 }
 
 
@@ -99,6 +145,10 @@ class Player extends Action{
                     this.speedY = 0
                 }
 
+                if(pair.bodyB.label === "ground" && pair.bodyA.label === "basket"){
+                    this.groundCollege = false
+                }
+
 
             }
 
@@ -107,8 +157,7 @@ class Player extends Action{
 
     create(game){
         this.game = game
-        this.event(game.engine)
-
+        this.coin.audio = this.createAudio("coin.mp3")
 
         this.person = this.rect(this.x,this.y - 100,60,120,{label:"player"})
         this.basket.bottom = this.rect(-50,50,100,10,{label:"basket"})
@@ -135,19 +184,21 @@ class Player extends Action{
             stiffness: 0.0001
         })
 
-
-
         this.Composite.add(game.engine.world,[this.constraint,this.ballon,this.compoundBody,this.person,this.constraintPerson])
+
+        this.event(game.engine)
     }
 
     setUp(){
+        if(this.gaz.level > 0){
         this.speedY = this.speedY > -1?this.speedY -=0.01:-1
         this.fireScale = this.fireScale < 1?this.fireScale +=0.01:1
         this.start = true
+        }
     }
 
     setDown(){
-        this.speedY = this.speedY < 0?this.speedY +=0.01:0
+        this.speedY = this.speedY < 0.1?this.speedY +=0.01:0.1
         this.fireScale = this.fireScale > 0?this.fireScale -=0.01:0
         this.start = true
     }
@@ -159,7 +210,7 @@ class Player extends Action{
 
 
         if (mouseIsPressed === true && hit) {
-           this.setUp()
+                this.setUp()
        }
         if (mouseIsPressed === true && hit2) {
             this.setDown()
@@ -167,7 +218,9 @@ class Player extends Action{
 
        if(this.p5.keyIsPressed === true){
            if(this.p5.key === "w" || this.p5.key === "ц" || this.p5.key === "ArrowUp"){
-               this.setUp()
+                   this.setUp()
+
+
            }
 
            if(this.p5.key === "s" || this.p5.key === "ы" || this.p5.key === "ArrowDown"){
@@ -181,7 +234,36 @@ class Player extends Action{
            this.speedX = 0
        }
 
+       if(this.ballon.position.y < 300){
+          this.speedX = 1
+       }
+        if(this.ballon.position.y < 100){
+            this.speedX = 2
+        }
+
+        if(this.ballon.position.y < 0){
+            this.speedX = 3
+        }
+
+        if(this.groundCollege){
+            this.speedX = 0
+        }
+
+        if(this.gaz.level > 0){
+            this.gaz.level -= this.fireScale / 10
+        }
+
+        if(this.gaz.level <= 0){
+            this.speedY = 0.1
+            this.fireScale = 0
+        }
+
+
+
         this.Body.setVelocity(this.ballon,{x:this.speedX,y:this.speedY})
+
+
+
 
 
 
@@ -207,6 +289,8 @@ class Player extends Action{
         strokeWeight(5)
         line(this.ballon.position.x,this.ballon.position.y + 200,this.constraint.bodyB.position.x + this.constraint.pointB.x,this.constraint.bodyB.position.y + this.constraint.pointB.y)
         this.p5.pop()
+        this.coin.vis.draw(this.coin.img)
+
 
 
     }
@@ -219,5 +303,26 @@ class Player extends Action{
     btn(){
         this.fire()
         image(this.bag.img,this.bag.x,this.bag.y,this.bag.width,this.bag.height)
+        this.fuelLevel()
+        image(this.coin.img,120,150)
+        this.p5.push()
+        textSize(50);
+        fill("white")
+        stroke("#000")
+        text(this.coin.count,180,165)
+        this.p5.pop()
+    }
+
+    fuelLevel(){
+        this.p5.push()
+        stroke("#FF9926")
+        strokeWeight(2)
+
+        fill("#fff")
+        rect(this.gaz.x,this.gaz.y,this.gaz.w,this.gaz.h)
+        fill("#2DE810")
+        rect(this.gaz.x - this.gaz.w / 2 + this.gaz.level / 2,50,this.gaz.level,50)
+        image(this.gazImg,this.gaz.x - 190,this.gaz.y)
+        this.p5.pop()
     }
 }

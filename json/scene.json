@@ -1,227 +1,459 @@
 [
-  {
-    "_t": "GROUP",
-    "id": "rauzsgarS0u_jzwhkay40w",
-    "name": "christmas",
-    "pos": [757,701],
-    "size": [77.5166,152],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "22uhXO-n2EGzTS8SoZ2suA",
-    "name": "christmas",
-    "pos": [290,689],
-    "size": [77.5166,152],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "YIv1U7YSPU2kpcacrUCEpw",
-    "name": "christmas",
-    "pos": [1913.5887,608.5],
-    "size": [132.3392,259.5],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "EXv7xmP4OkOnZw3DQfmlMA",
-    "name": "christmas",
-    "pos": [2225.7395,498.7],
-    "size": [176.86026,346.8],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "f0OFW7m_JUqSluDA5diQGA",
-    "name": "christmas",
-    "pos": [2863.806,635.5],
-    "size": [107.248314,210.29999],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "EabTnc2NYEaeqOz_fupStA",
-    "name": "christmas",
-    "expand": true,
-    "pos": [3653.754,289],
-    "size": [285.74054,560.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "BFIpLi5HCUavxXrv3PL7qg",
-    "name": "christmas",
-    "expand": true,
-    "pos": [4852,507],
-    "size": [174.56543,342.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "YwBJJI2W506sv-kjmW6MKw",
-    "name": "christmas",
-    "expand": true,
-    "pos": [4940,507],
-    "size": [174.56543,342.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "ZnsYqKRnUU-gqE5e75e8hw",
-    "name": "christmas",
-    "expand": true,
-    "pos": [5054.94,474],
-    "size": [180.68515,354.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "nsx4UDFPIUKpStUn72zx0w",
-    "name": "christmas",
-    "expand": true,
-    "pos": [5180,496],
-    "size": [180.68515,354.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "xINIU_xATkOGbCBkXIAoDQ",
-    "name": "christmas",
-    "expand": true,
-    "pos": [4734,540],
-    "size": [157.73615,309.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "BcvnYdgdF0C92t-7ed0VZQ",
-    "name": "christmas",
-    "expand": true,
-    "pos": [4813,540],
-    "size": [157.73615,309.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "LFdBgPGnqUWRR422fYEDEw",
-    "name": "christmas",
-    "expand": true,
-    "pos": [4645.5854,507],
-    "size": [174.56543,342.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "fKL9W-_FMkiuoEIrv-Cobg",
-    "name": "christmas",
-    "expand": true,
-    "pos": [4258,289],
-    "size": [285.74054,560.3],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },
-  {
-    "_t": "GROUP",
-    "id": "XJU621V920uFrZNoRnVVxw",
-    "name": "christmas",
-    "pos": [1573.2195,701],
-    "size": [79.86247,156.59998],
-    "lockAspect": true,
-    "export": [
-      {
-        "format": "SVG"
-      }
-    ],
-    "skipConstraints": true
-  },{
+    {
+      "_t": "GROUP",
+      "id": "rb_Bxld18US5_QjECykP4A",
+      "name": "coin",
+      "pos": [3068,402.564],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "TBOq4wHajEabMnUSaN7UyQ",
+      "name": "coin",
+      "pos": [3192.5,336.02798],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "JpmJWlC3h0GXkREm5GwFHg",
+      "name": "coin",
+      "pos": [3353.2,365.928],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "TPDJco5dW0mfLrv2TF9z-w",
+      "name": "coin",
+      "pos": [3503.3,282.246],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "2dE1Ng7fnE6cQbn1cKFv4A",
+      "name": "coin",
+      "pos": [3603.0999,159.828],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "3u1LbbJ9-06tlcT5NQX5ag",
+      "name": "coin",
+      "pos": [3735.518,82.928],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "6j2tCunq8keifrg_ZvRvAQ",
+      "name": "coin",
+      "pos": [3910.2,123.628],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "ugw9P0ldikezrTe1wezDYg",
+      "name": "coin",
+      "pos": [4084.0996,213.564],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "W2yOmVJC-k25Tzke_v1YiQ",
+      "name": "coin",
+      "pos": [4229.736,159.564],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "3tgnbMlKl065RzJhkYhF2A",
+      "name": "coin",
+      "pos": [4349.336,71.228004],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "gdZoPjEHekmK8EBzrGysCw",
+      "name": "coin",
+      "pos": [4474.2,114.928],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "rbi_YEAP2EKWvRjb_H9e0Q",
+      "name": "coin",
+      "pos": [4581.518,212.02798],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "HqYpgnusREmObaYAK8U_JA",
+      "name": "coin",
+      "pos": [4710.1997,297.246],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "rWjRHw_1S0i0JvwH6fAm2g",
+      "name": "coin",
+      "pos": [4836.2,297.228],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "Z3X9rRPg30uj9EhMdmtsoA",
+      "name": "coin",
+      "pos": [4964.536,299.928],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "9Q7rmOxdpk67H90cQoLZ8A",
+      "name": "coin",
+      "pos": [5118.8354,297.246],
+      "size": [76.635956,76.636],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "22uhXO-n2EGzTS8SoZ2suA",
+      "name": "christmas",
+      "pos": [290,689],
+      "size": [77.5166,152],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "YIv1U7YSPU2kpcacrUCEpw",
+      "name": "christmas",
+      "pos": [1715,626],
+      "size": [132.3392,259.5],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "rauzsgarS0u_jzwhkay40w",
+      "name": "christmas",
+      "pos": [757,701],
+      "size": [77.5166,152],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "EXv7xmP4OkOnZw3DQfmlMA",
+      "name": "christmas",
+      "pos": [3172.8,549.6],
+      "size": [176.86026,346.8],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "f0OFW7m_JUqSluDA5diQGA",
+      "name": "christmas",
+      "pos": [2864.9,672],
+      "size": [107.248314,210.29999],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "EabTnc2NYEaeqOz_fupStA",
+      "name": "christmas",
+      "pos": [3653.7595,311.2001],
+      "size": [285.74054,560.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "qyizYGJzY0CUrnalQVGYPg",
+      "name": "christmas",
+      "pos": [4287.2,311],
+      "size": [285.74054,560.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "BFIpLi5HCUavxXrv3PL7qg",
+      "name": "christmas",
+      "pos": [4848.4146,551.7],
+      "size": [174.56543,342.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "YwBJJI2W506sv-kjmW6MKw",
+      "name": "christmas",
+      "pos": [4936.4146,551.7],
+      "size": [174.56543,342.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "ZnsYqKRnUU-gqE5e75e8hw",
+      "name": "christmas",
+      "pos": [5051.3545,518.7],
+      "size": [180.68515,354.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "nsx4UDFPIUKpStUn72zx0w",
+      "name": "christmas",
+      "pos": [5176.4146,540.7],
+      "size": [180.68515,354.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "xINIU_xATkOGbCBkXIAoDQ",
+      "name": "christmas",
+      "pos": [4730.4146,584.7],
+      "size": [157.73615,309.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "BcvnYdgdF0C92t-7ed0VZQ",
+      "name": "christmas",
+      "pos": [4809.4146,584.7],
+      "size": [157.73615,309.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "LFdBgPGnqUWRR422fYEDEw",
+      "name": "christmas",
+      "pos": [4642,551.7],
+      "size": [174.56543,342.3],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "fKL9W-_FMkiuoEIrv-Cobg",
+      "name": "christmas",
+      "pos": [4008.5056,474],
+      "size": [213.2472,418.15],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    },
+    {
+      "_t": "GROUP",
+      "id": "XJU621V920uFrZNoRnVVxw",
+      "name": "christmas",
+      "pos": [1573.2195,701],
+      "size": [79.86247,156.59998],
+      "lockAspect": true,
+      "export": [
+        {
+          "format": "SVG"
+        }
+      ],
+      "skipConstraints": true
+    }
+
+  ,{
   "_t": "GROUP",
   "id": "fwPE6o_yKkiaXMXfcDE9PA",
   "name": "Start",
-  "pos": [1366,724],
+  "expand": true,
+  "pos": [2645.5176,734.5],
   "size": [219.48242,151],
   "export": [
     {
@@ -233,7 +465,7 @@
   "_t": "GROUP",
   "id": "3wRPiLRnXkWXmbnyiOx0LQ",
   "name": "platform-pusck",
-  "pos": [886.808,811.7],
+  "pos": [2107.0159,810.85004],
   "size": [395.38394,106.29996],
   "lockAspect": true,
   "export": [
@@ -242,5 +474,95 @@
     }
   ],
   "skipConstraints": true
+},{
+  "_t": "GROUP",
+  "id": "TDatYo7490ebnwsak4MaAw",
+  "name": "finish",
+  "pos": [38345,-166.12082],
+  "size": [425.55908,1053.1208],
+  "lockAspect": true,
+  "export": [
+    {
+      "format": "SVG"
+    }
+  ],
+  "skipConstraints": true
+},{
+  "_t": "RECT",
+  "id": "w-naXS6vc0yFt3vMf6B86A",
+  "name": "platform-left",
+  "pos": [0,-346],
+  "size": [220,1217.5],
+  "fills": [
+    {
+      "color": "3F51B5",
+      "colorId": "EuUffYlbOE6gorN2dUFVdw"
+    }
+  ]
+},{
+  "_t": "RECT",
+  "id": "EgPRcylqI0SG-b44Xj8crw",
+  "name": "platform-right",
+  "pos": [38771,-342.5],
+  "size": [220,1217.5],
+  "fills": [
+    {
+      "color": "3F51B5",
+      "colorId": "EuUffYlbOE6gorN2dUFVdw"
+    }
+  ]
+},{
+  "_t": "RECT",
+  "id": "RdBQV6YzzU-jsN6GjLqkMg",
+  "name": "ground",
+  "pos": [8,864],
+  "size": [41051.79,35],
+  "fill": "A6BD24"
+},{
+  "_t": "RECT",
+  "id": "lihGfGj8y0uMyshXjQlJXg",
+  "name": "heaven",
+  "pos": [8.205811,-3800],
+  "size": [41051.793,8600],
+  "fills": [
+    {
+      "type": 1,
+      "color": "C5CAE9",
+      "gradient": {
+        "from": [0.5,0],
+        "to": [0.5,1],
+        "stops": [
+          {
+            "color": "6DCED1"
+          },
+          {
+            "pos": 1,
+            "color": "C8EBC7"
+          }
+        ]
+      }
+    }
+  ]
+},{
+  "_t": "RECT",
+  "id": "Ko1P6nL3r0C5eIS_ZZwhxw",
+  "name": "grass_2",
+  "pos": [8,899],
+  "size": [41051.79,13],
+  "fill": "747536"
+},{
+  "_t": "RECT",
+  "id": "cMspgsoCSUuHs1OvPzrtVg",
+  "name": "ground_3",
+  "pos": [8,912],
+  "size": [41051.79,15.49231],
+  "fill": "381D13"
+},{
+  "_t": "RECT",
+  "id": "XA6f7nafIkq0wL0DrQkb3g",
+  "name": "grond_2",
+  "pos": [0,911],
+  "size": [41051.79,960],
+  "fill": "4A3124"
 }
 ]

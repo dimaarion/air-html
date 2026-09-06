@@ -1,6 +1,8 @@
 class Game {
   sdk = new Ysdk()
   p5
+  database = new Database()
+  settings = new Settings()
   canvas
   virtualWidth = 1920;
   virtualHeight = 1080;
@@ -10,8 +12,7 @@ class Game {
   Body = Matter.Body
   Events = Matter.Events
   Constraint = Matter.Constraint
-  player = new Player()
-  ground = new Ground()
+  player = new Player(2300,750)
   platform
   stone = {
       data:{},
@@ -47,7 +48,6 @@ init(p5){
     async preload(handleImage){
         this.player.init(this.p5)
         await this.player.preload(handleImage)
-        await this.ground.preload(this.p5,handleImage)
         await this.level_1.preload(this.p5,handleImage)
         this.scene = await this.p5.loadJSON('./json/scene.json',handleImage);
     }
@@ -57,12 +57,8 @@ init(p5){
             let pairs = event.pairs;
             for (let i = 0; i < pairs.length; i++) {
                 let pair = pairs[i];
-                if(pair.bodyB.label === "player" && pair.bodyA.label === "ground"){
-                    this.level_1.remove(this.engine)
-                    this.player.create(this)
-                    this.level_1.create(this.engine.world)
-                    this.player.start = false
-
+                if((pair.bodyA.label === "player" && pair.bodyB.label === "ground") || (pair.bodyA.label === "player" && pair.bodyB.label === "restart")){
+                    this.restart()
                 }
 
 
@@ -72,16 +68,18 @@ init(p5){
     }
 
     async create(canvas){
-        await  this.sdk.create()
-        await this.sdk.start()
-      this.canvas = canvas
-      rectMode(this.p5.CENTER);
-      imageMode(this.p5.CENTER);
+    await  this.sdk.create()
+    await this.sdk.start()
+    this.canvas = canvas
+    rectMode(this.p5.CENTER);
+    imageMode(this.p5.CENTER);
     this.engine = Matter.Engine.create()
-    this.level_1.create(this.engine.world)
     this.player.create(this)
+    this.level_1.create(this.engine.world)
     this.p5bezier = initBezier(this.canvas)
+    this.settings.create(this)
     this.event()
+
 
   }
 
@@ -96,6 +94,7 @@ init(p5){
     Matter.Engine.update(this.engine)
     this.p5.pop();
     this.player.btn()
+    this.settings.update(this)
 
   }
    getCameraOffset = () => {
@@ -109,14 +108,22 @@ init(p5){
      translate(this.cameraX,this.cameraY)
   };
 
+  restart(){
+      this.level_1.remove(this.engine)
+      this.player.create(this)
+      this.level_1.create(this.engine.world)
+      this.player.start = false
+      this.player.gaz.level = 200
+      this.player.fireScale = 0.3
+  }
+
   board(e){
       if(e.key === "r" || e.key === "к"){
-          this.level_1.remove(this.engine)
-          this.player.create(this)
-          this.level_1.create(this.engine.world)
-          this.player.start = false
+        this.restart()
       }
 
   }
+
+
 
 }
