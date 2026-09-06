@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="78.636" height="78.636" viewBox="0 0 78.636 78.636" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient_1" gradientUnits="userSpaceOnUse" x1="38.318" y1="0" x2="38.318" y2="76.636">
+      <stop offset="0" stop-color="#F7E34A" />
+      <stop offset="1" stop-color="#FCAB05" />
+    </linearGradient>
+    <filter color-interpolation-filters="sRGB" x="-52.624" y="-52.624" width="54.624" height="54.624" id="filter_2">
+      <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix_1" result="Shape_2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" in="SourceAlpha" result="HardAlpha_3" />
+      <feOffset dx="0" dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feComposite operator="arithmetic" k2="-1" k3="1" in2="HardAlpha_3" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0" />
+      <feBlend mode="normal" in2="Shape_2" result="InnerShadow_4" />
+    </filter>
+    <filter color-interpolation-filters="sRGB" x="-37.884" y="-37.884" width="39.884" height="39.884" id="filter_3">
+      <feFlood flood-opacity="0" result="BackgroundImageFix_1" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" in="SourceAlpha" />
+      <feOffset dx="0" dy="4" />
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.251 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix_1" result="Shadow_2" />
+      <feBlend mode="normal" in="SourceGraphic" in2="Shadow_2" result="Shape_3" />
+    </filter>
+  </defs>
+  <g transform="translate(1 1)">
+    <path d="M0 38.318C0 17.1555 17.1555 0 38.318 0C59.4804 0 76.636 17.1555 76.636 38.318C76.636 59.4804 59.4804 76.636 38.318 76.636C17.1555 76.636 0 59.4804 0 38.318Z" fill="url(#gradient_1)" fill-rule="evenodd" stroke-width="2" stroke="#F79F04" />
+    <path d="M0 27.3121C0 12.2281 12.2281 0 27.3121 0C42.3962 0 54.6243 12.2281 54.6243 27.3121C54.6243 42.3962 42.3962 54.6243 27.3121 54.6243C12.2281 54.6243 0 42.3962 0 27.3121Z" fill="url(#gradient_1)" fill-rule="evenodd" filter="url(#filter_2)" transform="translate(11.006 11.006)" />
+    <path d="M0 19.942C0 8.92836 8.92836 0 19.942 0C30.9557 0 39.8841 8.92836 39.8841 19.942C39.8841 30.9557 30.9557 39.8841 19.942 39.8841C8.92836 39.8841 0 30.9557 0 19.942Z" fill="url(#gradient_1)" fill-rule="evenodd" filter="url(#filter_3)" transform="translate(18.376 18.376)" />
+  </g>
+</svg>
