@@ -61,7 +61,7 @@ class Player extends Action{
     width = 250
     height = 400
     offsetBallon = {
-        x:88,
+        x:150,
         y:450
     }
     size = 120
