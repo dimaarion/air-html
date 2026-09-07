@@ -1,0 +1,226 @@
+[
+  {
+    "_t": "GROUP",
+    "id": "rb_Bxld18US5_QjECykP4A",
+    "name": "coin",
+    "pos": [3038,269],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "TBOq4wHajEabMnUSaN7UyQ",
+    "name": "coin",
+    "pos": [3186.636,218],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "JpmJWlC3h0GXkREm5GwFHg",
+    "name": "coin",
+    "pos": [3335.272,183],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "TPDJco5dW0mfLrv2TF9z-w",
+    "name": "coin",
+    "pos": [3483.908,145],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "2dE1Ng7fnE6cQbn1cKFv4A",
+    "name": "coin",
+    "pos": [3632.544,107],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "3u1LbbJ9-06tlcT5NQX5ag",
+    "name": "coin",
+    "pos": [3781.18,82.928],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "6j2tCunq8keifrg_ZvRvAQ",
+    "name": "coin",
+    "pos": [3929.816,123.628],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "ugw9P0ldikezrTe1wezDYg",
+    "name": "coin",
+    "pos": [4078.452,145],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "W2yOmVJC-k25Tzke_v1YiQ",
+    "name": "coin",
+    "pos": [4227.088,106],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "3tgnbMlKl065RzJhkYhF2A",
+    "name": "coin",
+    "pos": [4375.7236,71.228004],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "gdZoPjEHekmK8EBzrGysCw",
+    "name": "coin",
+    "pos": [4524.3594,84],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "rbi_YEAP2EKWvRjb_H9e0Q",
+    "name": "coin",
+    "pos": [4672.995,106],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "HqYpgnusREmObaYAK8U_JA",
+    "name": "coin",
+    "pos": [4821.631,121],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "rWjRHw_1S0i0JvwH6fAm2g",
+    "name": "coin",
+    "pos": [4970.2666,122],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "Z3X9rRPg30uj9EhMdmtsoA",
+    "name": "coin",
+    "pos": [5118.9023,122],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  },
+  {
+    "_t": "GROUP",
+    "id": "9Q7rmOxdpk67H90cQoLZ8A",
+    "name": "coin",
+    "pos": [5267.538,122],
+    "size": [76.635956,76.636],
+    "lockAspect": true,
+    "export": [
+      {
+        "format": "SVG"
+      }
+    ],
+    "skipConstraints": true
+  }
+]

@@ -1,6 +1,7 @@
 class Game {
   sdk = new Ysdk()
   p5
+  isPaused = false
   database = new Database()
   settings = new Settings()
   canvas
@@ -12,7 +13,7 @@ class Game {
   Body = Matter.Body
   Events = Matter.Events
   Constraint = Matter.Constraint
-  player = new Player(2300,750)
+  player = new Player(2300,700,1)
   platform
   stone = {
       data:{},
@@ -84,6 +85,7 @@ init(p5){
   }
 
   update(){
+
       rectMode(this.p5.CENTER);
       imageMode(this.p5.CENTER);
     this.p5.push();
@@ -91,7 +93,10 @@ init(p5){
     this.level_1.bg()
     this.level_1.update()
     this.player.update()
-    Matter.Engine.update(this.engine)
+      if(!this.isPaused){
+          Matter.Engine.update(this.engine)
+      }
+
     this.p5.pop();
     this.player.btn()
     this.settings.update(this)
@@ -122,6 +127,10 @@ init(p5){
         this.restart()
       }
 
+  }
+
+  prees(){
+      this.settings.prees(this)
   }
 
 

@@ -1,11 +1,17 @@
-class Close{
+class Pause{
     game
     action = new Action()
-    constructor() {
-
-    }
-    preload(){
-
+    value = false
+    hit = true
+    x = 0
+    y = 0
+    w = 100
+    h = 100
+    constructor(x,y,w,h) {
+        this.x = x
+        this.y = y
+        this.w = w
+        this.h = h
     }
 
     create(game){
@@ -13,12 +19,65 @@ class Close{
 
     }
 
+    event(){
+        let hit =  this.game.p5.collidePointRect(this.action.getMouseWorldX(this.game.offsetX,this.game.currentScale),this.action.getMouseWorldY(this.game.offsetY,this.game.currentScale),this.x - this.w / 2,this.y - this.h / 2,this.w,this.h)
+        if(this.game.p5.mouseIsPressed === true && hit){
+            this.value = this.hit
+        }
+    }
+
     update(){
         this.game.p5.push()
-        this.game.p5.rotate(45)
-        this.game.p5.translate(-500,-500)
-        this.game.p5.rect(500,500,10,30)
+        this.game.p5.noFill()
+        this.game.p5.strokeWeight(2)
+        this.game.p5.stroke("#FF9825")
+        this.game.p5.rect(this.x,this.y,this.w,this.h)
+        this.game.p5.fill("white")
+        this.game.p5.rect(this.x - 15,this.y,15,50)
+        this.game.p5.rect(this.x + 15,this.y,15,50)
         this.game.p5.pop()
+        this.event()
+    }
+}
+
+class Close{
+    game
+    action = new Action()
+    value = false
+    hit = true
+    x = 0
+    y = 0
+    constructor(x,y) {
+        this.x = x
+        this.y = y
+    }
+
+    create(game){
+        this.game = game
+
+    }
+
+    event(){
+      let hit =  this.game.p5.collidePointRect(this.action.getMouseWorldX(this.game.offsetX,this.game.currentScale),this.action.getMouseWorldY(this.game.offsetY,this.game.currentScale),this.x - 25,this.y + 25,100,100)
+            if(this.game.p5.mouseIsPressed === true && hit){
+                this.value = this.hit
+            }
+    }
+
+
+    update(){
+        this.game.p5.push()
+        this.game.p5.noStroke()
+        this.game.p5.translate(this.x,this.y)
+        this.game.p5.rotate(Math.PI / 4)
+        this.game.p5.translate(50,50)
+        this.game.p5.fill("white")
+        this.game.p5.rect(0,0,15,50)
+        this.game.p5.rotate(-Math.PI / 2)
+        this.game.p5.translate(0,0)
+        this.game.p5.rect(0,0,15,50)
+        this.game.p5.pop()
+        this.event()
     }
 }
 

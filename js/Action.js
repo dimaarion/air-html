@@ -4,10 +4,12 @@ class Action{
     Body = Matter.Body
     Constraint = Matter.Constraint
     Events = Matter.Events
+    Runner = Matter.Runner
     database = new Database()
     scene
     gameWidth = 1920
     gameHeight = 1080
+    isPaused = false
 
     createAudio(name){
         return new Howl({
@@ -15,6 +17,25 @@ class Action{
             html5: false, // Используем Web Audio API (скрывает из трея)
             loop: false,
             volume: this.database.getAll().effect // начальная громкость из состояния,
+        })
+    }
+
+    removeBody(world,body,name){
+        if(body.label === name){
+            this.Composite.remove(world,body)
+        }
+
+    }
+
+
+    setConstraint(bodyA,bodyB,pointA = { x: 0, y: 0 },pointB = { x: 0, y: 0 },stiffness = 1,length = 50){
+       return  this.Constraint.create({
+            bodyA:bodyA,
+            pointA: pointA,
+            bodyB: bodyB,
+            pointB: pointB,
+            stiffness: stiffness,
+            length: length
         })
     }
 

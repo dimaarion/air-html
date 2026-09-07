@@ -36,7 +36,8 @@ class Level_1 extends Action{
     }
     coin = {
         img:null,
-        arr:[]
+        arr:[],
+        json:[]
     }
     wind = {
         weak:{
@@ -87,11 +88,12 @@ class Level_1 extends Action{
         this.platformImg.img = await this.p5.loadImage('./img/platform-pusck.svg',handleImage);
         this.finish.img = await this.p5.loadImage('./img/finish.svg',handleImage);
         this.coin.img = await this.p5.loadImage('./img/coin.svg',handleImage);
+        this.coin.json = await this.p5.loadJSON('./json/level_1/coins.json',handleImage);
     }
 
     create(world){
         this.world = world
-        this.christmas.body = this.scene.filter((el)=>el.name === "christmas").map((el)=>this.trapezoid(el.pos[0],el.pos[1],el.size[0],el.size[1],0.9,{isStatic:true,label:"restart"}))
+        this.christmas.body = this.scene.filter((el)=>el.name === "christmas").map((el)=>this.trapezoid(el.pos[0],el.pos[1],el.size[0] - el.size[0] / 4,el.size[1] - el.size[1] / 4,0.9,{isStatic:true,label:"restart"}))
         this.startImg.body = this.scene.filter((el)=>el.name === "Start").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,label:"restart"}))
         this.platformImg.body = this.scene.filter((el)=>el.name === "platform-pusck").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,label:"restart"}))
         this.finish.body = this.scene.filter((el)=>el.name === "finish").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,isSensor:true}))
@@ -102,7 +104,7 @@ class Level_1 extends Action{
         this.grass_2 = this.scene.filter((el)=>el.name === "grass_2").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,isSensor:true,label:"restart"}))
         this.ground_3 = this.scene.filter((el)=>el.name === "ground_3").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,isSensor:true,label:"restart"}))
         this.ground_2 = this.scene.filter((el)=>el.name === "grond_2").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,isSensor:true,label:"restart"}))
-        this.coin.arr = this.scene.filter((el)=>el.name === "coin").map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,isSensor:true,label:"coin"}))
+        this.coin.arr = this.coin.json.map((el)=>this.rect(el.pos[0],el.pos[1],el.size[0],el.size[1],{isStatic:true,isSensor:true,label:"coin"}))
 
 
 
@@ -230,7 +232,7 @@ class Level_1 extends Action{
             rect(el.position.x,el.position.y,el.width,el.height)
         })
         this.christmas.body.forEach((el)=>{
-            this.visible(this.player,this.p5,el.position.x,el.position.y - el.width / 4,el.width,el.height + el.width / 2,()=>image(this.christmas.img,el.position.x,el.position.y - el.width / 4 ,el.width,el.height + el.width / 2))
+            this.visible(this.player,this.p5,el.position.x,el.position.y,el.width + el.width / 2,el.height + el.height / 2,()=>image(this.christmas.img,el.position.x,el.position.y ,el.width + el.width / 2,el.height + el.height / 2))
         })
         this.startImg.body.forEach((el)=>{
             image(this.startImg.img,el.position.x,el.position.y)

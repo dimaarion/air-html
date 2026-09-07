@@ -1838,7 +1838,7 @@ var Axes = __webpack_require__(11);
      * Sets the body as static, including isStatic flag and setting mass and inertia to Infinity.
      * @method setStatic
      * @param {body} body
-     * @param {bool} isStatic
+     * @param {boolean} isStatic
      */
     Body.setStatic = function(body, isStatic) {
         for (var i = 0; i < body.parts.length; i++) {
