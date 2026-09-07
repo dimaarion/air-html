@@ -53,7 +53,7 @@ class Player extends Action{
     }
     constraint
     game
-    fireScale = 0.2
+    fireScale = 0
     speedX = 0.0
     speedY = 0.0
     x = 6000
